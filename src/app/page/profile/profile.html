@@ -1,0 +1,53 @@
+<div class="profile-container">
+
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <mat-icon>person</mat-icon>
+        </div>
+
+        <h1>{{ userSercie.user()?.name }}</h1>
+        <span class="profile-subtitle">Perfil do usuário</span>
+    </div>
+
+    <div class="profile-info">
+
+        <div class="info-item">
+            <mat-icon>person_outline</mat-icon>
+            <div>
+                <label>Sexo</label>
+                <span>{{ userSercie.user()?.sex }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <mat-icon>calendar_today</mat-icon>
+            <div>
+                <label>Ano</label>
+                <span>{{ userSercie.user()?.year }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <mat-icon>email</mat-icon>
+            <div>
+                <label>Email</label>
+                <span>{{ userSercie.user()?.email }}</span>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <mat-icon>phone</mat-icon>
+            <div>
+                <label>Telefone</label>
+                <span>{{ userSercie.user()?.phone }}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="profile-actions">
+        <span routerLink="/create">Criar Conta</span>
+        <span routerLink="/login">Logar Conta</span>
+    </div>
+
+</div>

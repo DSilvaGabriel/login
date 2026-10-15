@@ -1,1 +1,37 @@
-<p>login works!</p>
+<form
+    class="form-container"
+    (ngSubmit)="onSubimit()"
+    [formGroup]="form">
+
+    <h2>Entrar</h2>
+    <p class="form-description">Acesse sua conta</p>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+            matInput
+            type="email"
+            formControlName="email">
+        <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+            matInput
+            type="password"
+            formControlName="password">
+        <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
+
+    <button
+        mat-flat-button
+        type="submit"
+        class="submit-button">
+        Logar
+        <mat-icon>login</mat-icon>
+    </button>
+
+    <span routerLink="/create">Criar Conta</span>
+</form>
+

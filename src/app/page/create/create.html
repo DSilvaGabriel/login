@@ -1,0 +1,48 @@
+<form
+    class="form-container"
+    (ngSubmit)="onSubimit()"
+    [formGroup]="form">
+
+    <h2>Cadastro de usuário</h2>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput type="tel" formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Year</mat-label>
+        <input matInput formControlName="year">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Sex</mat-label>
+        <mat-select formControlName="sex">
+            <mat-option value="masculino">Masculino</mat-option>
+            <mat-option value="feminino">Feminino</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" class="submit-button">
+        Enviar
+        <mat-icon>person_add</mat-icon>
+    </button>
+
+    <span routerLink="/login">Logar Conta</span>
+
+</form>

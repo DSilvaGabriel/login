@@ -1,0 +1,133 @@
+.profile-container {
+    max-width: 460px;
+    margin: 50px auto;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    .profile-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 32px 20px;
+        background-color: #091540;
+        color: #ffffff;
+
+        .profile-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+
+            background-color: #1b2cc1;
+            border: 3px solid #7692ff;
+            border-radius: 50%;
+
+            mat-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 42px;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        .profile-subtitle {
+            margin-top: 8px;
+            color: #abd2fa;
+            font-size: 14px;
+        }
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 24px;
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 8px;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            > mat-icon {
+                color: #1b2cc1;
+                flex-shrink: 0;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                min-width: 0;
+            }
+
+            label {
+                color: #64748b;
+                font-size: 12px;
+            }
+
+            span {
+                color: #091540;
+                font-size: 15px;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px 24px;
+
+    span {
+        margin-top: 0;
+        text-align: center;
+        color: #1b2cc1;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: #14219a;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        margin: 20px 12px;
+
+        .profile-header {
+            padding: 28px 16px;
+        }
+
+        .profile-info {
+            padding: 16px;
+        }
+    }
+}
